@@ -1,36 +1,56 @@
 import Link from "next/link";
 import Image from "next/image";
-import { AppBar, Toolbar, Typography, Container, Paper, Button } from "@mui/material";
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    Container,
+    Avatar,
+    Button,
+} from "@mui/material";
 import { Link as MUILink } from "@mui/material";
 
 function Navbar() {
     return (
         <nav>
-            <AppBar sx={{ bgcolor: "transparent" }}>
+            <AppBar>
                 <Container>
                     <Toolbar disableGutters>
-                        <Paper
+                        <Avatar
                             sx={{
                                 mr: 2,
-                                bgcolor: "transparent",
-                                boxShadow: "none",
+                                bgcolor: "transparent"
                             }}
+                            
+                      
                         >
                             <Image
                                 src="/te2.svg"
                                 alt="logo"
-                                width="40px"
-                                height="40px"
+                                layout="fill"
                             ></Image>
-                        </Paper>
-                        <Link href="/about">
-                            <Button sx={{ mr: 2 }}>About</Button>
+                        </Avatar>
+
+                        <Link href="/about" passHref>
+                            <Button
+                                sx={{ mr: 2, color: "white", display: "block" }}
+                            >
+                                About
+                            </Button>
                         </Link>
-                        <Link href="/events">
-                            <Button sx={{ mr: 2 }}>Events</Button>
+                        <Link href="/events" passHref>
+                            <Button
+                                sx={{ mr: 2, color: "white", display: "block" }}
+                            >
+                                Events
+                            </Button>
                         </Link>
-                        <Link href="/join">
-                            <Button sx={{ mr: 2 }}>Join</Button>
+                        <Link href="/join" passHref>
+                            <Button
+                                sx={{ mr: 2, color: "white", display: "block" }}
+                            >
+                                Join
+                            </Button>
                         </Link>
                     </Toolbar>
                 </Container>
