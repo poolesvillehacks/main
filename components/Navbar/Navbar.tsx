@@ -28,6 +28,7 @@ function Navbar() {
                                 }}
                             >
                                 <Image
+                                    unoptimized={true}
                                     src="/te2.svg"
                                     alt="logo"
                                     layout="fill"
