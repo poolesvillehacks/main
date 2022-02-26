@@ -26,6 +26,8 @@ const theme = createTheme({
             textTransform: "none",
             fontWeight: 500,
             textAlign: "center",
+            display: "block",
+            minWidth: 125,
         },
         fontFamily: ["Montserrat"].join(","),
     },

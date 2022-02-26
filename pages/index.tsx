@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link"
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar/Navbar";
@@ -29,8 +30,7 @@ const Home: NextPage = () => {
             <main>
                 <Container
                     sx={{
-                        height: "40vh",
-                        minHeight: 600,
+                        minHeight: 500,
                         display: "flex",
                         flexDirection: "column",
                         justifyContent: "center",
@@ -41,9 +41,15 @@ const Home: NextPage = () => {
                     <Typography component="h1" variant="h3">
                         poolesville_hacks
                     </Typography>
-                    <Button color="secondary" variant="contained">
-                        Learn More
-                    </Button>
+                    <Link href="#about" passHref>
+                        <Button
+                            color="secondary"
+                            sx={{ width: 120 }}
+                            variant="contained"
+                        >
+                            Learn More
+                        </Button>
+                    </Link>
                 </Container>
 
                 <Box
@@ -53,7 +59,6 @@ const Home: NextPage = () => {
                 >
                     <Container
                         sx={{
-                            flexWrap: "wrap",
                             scrollMarginTop: "5vh",
 
                             py: { xs: 4, md: 8 },
@@ -61,7 +66,7 @@ const Home: NextPage = () => {
                         id="about"
                     >
                         <Grid container spacing={6}>
-                            <Grid item xs={6}>
+                            <Grid item xs={12} md={6}>
                                 <Typography
                                     component="h2"
                                     variant="h3"
@@ -92,7 +97,8 @@ const Home: NextPage = () => {
                             </Grid>
                             <Grid
                                 item
-                                xs={6}
+                                xs={12}
+                                md={6}
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
@@ -102,7 +108,7 @@ const Home: NextPage = () => {
                                 <Card
                                     sx={{
                                         borderRadius: "20px",
-                                        bgcolor: "secondary.dark",
+                                        bgcolor: "secondary.light",
                                         height: 200,
                                         width: "100%",
                                         mx: 2,
@@ -131,7 +137,36 @@ const Home: NextPage = () => {
                         </Grid>
                     </Container>
                 </Box>
+
+                <Container
+                    sx={{
+                        py: { xs: 4, md: 10 },
+                    }}
+                >
+                    <Typography component="h2" variant="h4" gutterBottom>
+                        Events
+                    </Typography>
+                    <Typography component="p" variant="subtitle1" gutterBottom>
+                        Check out our full list of planned events!
+                    </Typography>
+                    <Link href="/events" passHref>
+                        <Button
+                            color="secondary"
+                            variant="contained"
+                            sx={{ width: 120 }}
+                        >
+                            Schedule
+                        </Button>
+                    </Link>
+                </Container>
             </main>
+            <footer>
+                <Container sx={{ py: { xs: 4, md: 6 } }}>
+                    <Typography variant="body2">
+                        © poolesville_hacks 2022
+                    </Typography>
+                </Container>
+            </footer>
         </>
     );
 };
