@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
-
+import Layout from "../components/Layout/Layout"
 const theme = createTheme({
     palette: {
         mode: "dark",
@@ -32,11 +32,14 @@ const theme = createTheme({
         fontFamily: ["Montserrat"].join(","),
     },
 });
+
 function App({ Component, pageProps }: AppProps) {
   return (
       <ThemeProvider theme={theme}>
           <CssBaseline />
-          <Component {...pageProps} />
+          <Layout>
+              <Component {...pageProps} />
+          </Layout>
       </ThemeProvider>
   );
 }

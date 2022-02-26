@@ -35,7 +35,7 @@ function Navbar() {
                                 ></Image>
                             </Avatar>
                         </Link>
-                        <Link href="#about" passHref>
+                        <Link href="/#about" passHref>
                             <Button
                                 sx={{ mr: 2, color: "white", display: "block" }}
                             >
