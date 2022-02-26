@@ -9,20 +9,24 @@ import {
     Button,
 } from "@mui/material";
 import { Link as MUILink } from "@mui/material";
+const scroll = (id: string):void => {
+    document.getElementById(id)?.scrollIntoView({inline: "center"})
+};
+
 
 function Navbar() {
+    
+
     return (
         <nav>
-            <AppBar>
+            <AppBar elevation={4}>
                 <Container>
                     <Toolbar disableGutters>
                         <Avatar
                             sx={{
                                 mr: 2,
-                                bgcolor: "transparent"
+                                bgcolor: "transparent",
                             }}
-                            
-                      
                         >
                             <Image
                                 src="/te2.svg"
@@ -31,7 +35,7 @@ function Navbar() {
                             ></Image>
                         </Avatar>
 
-                        <Link href="/about" passHref>
+                        <Link href="#about" passHref>
                             <Button
                                 sx={{ mr: 2, color: "white", display: "block" }}
                             >

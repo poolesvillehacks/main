@@ -8,8 +8,8 @@ const theme = createTheme({
         primary: {
             light: "#484848",
             main: "#212121",
-            dark: "#000000",
-            contrastText: "#fff",
+            dark: "#121212",
+            contrastText: "#e0e0e0",
         },
         secondary: {
             light: "#ffeb3b",
@@ -24,13 +24,11 @@ const theme = createTheme({
     typography: {
         button: {
             textTransform: "none",
-            fontWeight: 500
+            fontWeight: 500,
+            textAlign: "center",
         },
-        fontFamily: [
-            "Montserrat"
-        ].join(",")
+        fontFamily: ["Montserrat"].join(","),
     },
-
 });
 function App({ Component, pageProps }: AppProps) {
   return (
