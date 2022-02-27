@@ -69,9 +69,9 @@ const Home: NextPage = () => {
                                 color="primary.contrastText"
                             >
                                 poolesville_hacks is a school-wide hackathon
-                                club that hosts around four hackathons
+                                club that hosts aims to around four hackathons
                                 throughout the year. Started by PHS students,
-                                poolesville_hacks aims to develop creative and
+                                the hackathon&apos;s objective is to develop creative and
                                 technical skills. Participants will design,
                                 prototype, and present their projects to a panel
                                 of judges and have a chance to win a competitive
