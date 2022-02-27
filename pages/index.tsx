@@ -28,7 +28,7 @@ const Home: NextPage = () => {
                 }}
             >
                 <Typography component="h1" variant="h3">
-                    poolesville_hacks
+                    poolesville_&#8203;hacks
                 </Typography>
                 <Link href="#about" passHref>
                     <Button
