@@ -35,7 +35,7 @@ const Events: NextPage = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    py: { xs: 4, md: 8 },
+                    py: 8,
                     flexDirection: "column"
                 }}
             >   
