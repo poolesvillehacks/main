@@ -30,15 +30,27 @@ const Home: NextPage = () => {
                 <Typography component="h1" variant="h3">
                     poolesville_&#8203;hacks
                 </Typography>
-                <Link href="#about" passHref>
+                <Box display="flex" gap="15px" flexDirection="row">
+                    <Link href="#about" passHref>
+                        <Button
+                            color="secondary"
+                            sx={{ width: 120 }}
+                            variant="outlined"
+                        >
+                            Learn More
+                        </Button>
+                    </Link>
                     <Button
                         color="secondary"
-                        sx={{ width: 120 }}
+                        sx={{ width: 140, fontWeight: 600 }}
                         variant="contained"
+                        href="https://forms.gle/yaoMLbipLd9k9F7HA"
+                        target="_blank"
+
                     >
-                        Learn More
+                        Interest Form
                     </Button>
-                </Link>
+                </Box>
             </Container>
 
             <Box
@@ -71,16 +83,16 @@ const Home: NextPage = () => {
                                 poolesville_hacks is a school-wide hackathon
                                 club that hosts aims to around four hackathons
                                 throughout the year. Started by PHS students,
-                                the hackathon&apos;s objective is to develop creative and
-                                technical skills. Participants will design,
-                                prototype, and present their projects to a panel
-                                of judges and have a chance to win a competitive
-                                prize. Participating is completely free and is a
-                                great chance to test your technical skills and
-                                win great prizes. Additionally, workshops will
-                                be hosted during the event that aim to introduce
-                                students to skills used in the professional
-                                field.
+                                the hackathon&apos;s objective is to develop
+                                creative and technical skills. Participants will
+                                design, prototype, and present their projects to
+                                a panel of judges and have a chance to win a
+                                competitive prize. Participating is completely
+                                free and is a great chance to test your
+                                technical skills and win great prizes.
+                                Additionally, workshops will be hosted during
+                                the event that aim to introduce students to
+                                skills used in the professional field.
                             </Typography>
                         </Grid>
                         <Grid
@@ -117,7 +129,7 @@ const Home: NextPage = () => {
                                         variant="body1"
                                         color="secondary.contrastText"
                                     >
-                                        TBD
+                                        TBD, Please fill out the interest form above!
                                     </Typography>
                                 </CardContent>
                             </Card>
