@@ -30,13 +30,13 @@ function Footer() {
                             height="40px"
                         ></Image>
                     </IconButton>
-                    <IconButton
+                    {/* <IconButton
                         aria-label="Instagram"
                         size="large"
                         href={info.instagram}
                     >
                         <InstagramIcon fontSize="inherit" />
-                    </IconButton>
+                    </IconButton> */}
                 </Box>
                 <Typography textAlign="center" variant="body2">
                     © poolesville_hacks 2022
