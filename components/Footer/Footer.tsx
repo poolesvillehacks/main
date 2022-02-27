@@ -12,12 +12,15 @@ function Footer() {
     };
     return (
         <footer>
-            <Container sx={{ py: { xs: 4, md: 6 },
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column"
-        }}>
+            <Container
+                sx={{
+                    py: { xs: 4, md: 6 },
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "column",
+                }}
+            >
                 <Box>
                     <IconButton aria-label="Discord" href={info.discord}>
                         <Image
@@ -27,12 +30,18 @@ function Footer() {
                             height="40px"
                         ></Image>
                     </IconButton>
-                    <IconButton aria-label="Instagram" size="large" href={info.instagram}>
+                    <IconButton
+                        aria-label="Instagram"
+                        size="large"
+                        href={info.instagram}
+                    >
                         <InstagramIcon fontSize="inherit" />
                     </IconButton>
                 </Box>
-                <Typography variant="body2">
+                <Typography textAlign="center" variant="body2">
                     © poolesville_hacks 2022
+                    <br></br>
+                    This site is under construction 🚧
                 </Typography>
             </Container>
         </footer>

@@ -25,6 +25,7 @@ function Navbar() {
                                 sx={{
                                     mr: 2,
                                     bgcolor: "transparent",
+                                    cursor: "pointer"
                                 }}
                             >
                                 <Image
