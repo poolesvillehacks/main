@@ -15,7 +15,7 @@ function Layout({ children }: LayoutProps) {
                     name="description"
                     content="poolesville_hacks is a student run hackathon"
                 />
-
+                <meta name="keywords" content="poolesville, hacks, poolesvillehacks, poolesville hacks, poolesville high school, poolesville_hacks, phs hacks, hackathon" />
                 <link rel="icon" href="/te2.svg" />
             </Head>
             <Navbar />
