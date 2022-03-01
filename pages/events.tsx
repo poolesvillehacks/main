@@ -21,10 +21,23 @@ const Events: NextPage = () => {
         { field: "name", headerName: "Event Name", minWidth: 200, flex: 1 },
         { field: "date", headerName: "Date", width: 150 },
         { field: "time", headerName: "Time", width: 150 },
+        { field: "location", headerName: "Location", width: 150 },
     ];
     const rows: GridRowsProp = [
-        { id: 1, name: "Meeting with Computer Club", date: "2/28", time: "11:00 AM EST" },
-
+        {
+            id: 1,
+            name: "Meeting with Ms. Baliey",
+            date: "2/29",
+            time: "2:30 PM EST or 3:30 PM EST",
+            location: "33B",
+        },
+        {
+            id: 2,
+            name: "Potential Hackathon Opening Ceremony, stay updated!",
+            date: "4/2",
+            time: "6:00 PM EST",
+            location: "Zoom",
+        },
     ];
     return (
         <>
