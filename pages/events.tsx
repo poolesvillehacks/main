@@ -25,16 +25,16 @@ const Events: NextPage = () => {
     ];
     const rows: GridRowsProp = [
         {
-            id: 1,
-            name: "Meeting with Ms. Baliey",
-            date: "2/29",
-            time: "2:30 PM EST or 3:30 PM EST",
+            id:1,
+            name: "Leadership Meeting",
+            date: "3/4",
+            time: "11:00 AM EST",
             location: "33B",
         },
         {
             id: 2,
             name: "Potential Hackathon Opening Ceremony, stay updated!",
-            date: "4/2",
+            date: "5/20",
             time: "6:00 PM EST",
             location: "Zoom",
         },

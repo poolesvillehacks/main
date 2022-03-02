@@ -8,7 +8,7 @@ import Image from "next/image"
 function Footer() {
     const info = {
         discord: "https://discord.gg/UbBbwypAwk",
-        instagram: "https://instagram.com/poolesville_hacks"
+        instagram: "https://instagram.com/poolesvillehacks"
     };
     return (
         <footer>
@@ -30,13 +30,13 @@ function Footer() {
                             height="40px"
                         ></Image>
                     </IconButton>
-                    {/* <IconButton
+                    <IconButton
                         aria-label="Instagram"
                         size="large"
                         href={info.instagram}
                     >
                         <InstagramIcon fontSize="inherit" />
-                    </IconButton> */}
+                    </IconButton>
                 </Box>
                 <Typography textAlign="center" variant="body2">
                     © poolesville_hacks 2022
