@@ -202,6 +202,7 @@ const Home: NextPage = () => {
                     alignItems: "center",
                     flexDirection: "column" 
                 }}
+                id="sponsors"
             >
                 <Typography variant="h3" >Made Possible By</Typography>
                 {sponsorships.map((sponsor) => (
