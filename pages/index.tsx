@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar/Navbar";
+import Countdown from "../components/Countdown/Countdown";
 import {
     Container,
     Typography,
@@ -13,6 +14,42 @@ import {
     CardActions,
     Box,
 } from "@mui/material";
+import Image from "next/image";
+
+// let theDate = "5/20/2022 6:00 PM"
+
+// const getTime = (date: string) => {
+//     let datefuture = new Date(date);
+//     datefuture.toLocaleString("en-US", { timeZone: "America/New_York" });
+//     let datenow = new Date();
+//     datenow.toLocaleString("en-US", { timeZone: "America/New_York" });
+//     let date_future = datefuture.getTime();
+//     let date_now = datenow.getTime();
+//     let delta = Math.abs(date_future - date_now) / 1000;
+
+//     // calculate (and subtract) whole days
+//     let days = Math.floor(delta / 86400);
+//     delta -= days * 86400;
+
+//     // calculate (and subtract) whole hours
+//     let hours = Math.floor(delta / 3600) % 24;
+//     delta -= hours * 3600;
+
+//     // calculate (and subtract) whole minutes
+//     let minutes = Math.floor(delta / 60) % 60;
+//     delta -= minutes * 60;
+//     return [days, hours, minutes];
+// };
+// let time = getTime(theDate).join(":");
+import leadinglearners from "../public/leadinglearners.png";
+const sponsorships = [
+    {
+        name: "Leading Learners",
+        url: "https://www.leading-learners.com/",
+        path: leadinglearners,
+    },
+
+];
 
 const Home: NextPage = () => {
     return (
@@ -46,7 +83,6 @@ const Home: NextPage = () => {
                         variant="contained"
                         href="https://forms.gle/yaoMLbipLd9k9F7HA"
                         target="_blank"
-
                     >
                         Interest Form
                     </Button>
@@ -128,9 +164,9 @@ const Home: NextPage = () => {
                                         component="h2"
                                         variant="body1"
                                         color="secondary.contrastText"
-                                    >
-                                        TBD, Please fill out the interest form above!
-                                    </Typography>
+                                        sx={{ fontWeight: 600 }}
+                                    ></Typography>
+                                    {/* <Countdown time={time} /> */}
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -158,6 +194,24 @@ const Home: NextPage = () => {
                         Schedule
                     </Button>
                 </Link>
+            </Container>
+            <Container
+                sx={{
+                    py: { xs: 4, md: 10 },
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column" 
+                }}
+            >
+                <Typography variant="h3" >Made Possible By</Typography>
+                {sponsorships.map((sponsor) => (
+                    <Button key={sponsor.name} href={sponsor.url} sx={{
+                        width: 400,
+                        height: 100
+                    }}>
+                        <Image src={sponsor.path} objectFit="cover" layout="fill" alt={sponsor.name}></Image>
+                    </Button>
+                ))}
             </Container>
         </>
     );

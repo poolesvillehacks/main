@@ -42,7 +42,6 @@ function Footer() {
                     © poolesville_hacks 2022
                     <br></br>
                     This site is under construction 🚧
-                    This domain is temporary
                 </Typography>
             </Container>
         </footer>
