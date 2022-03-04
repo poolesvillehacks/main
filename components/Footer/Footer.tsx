@@ -24,7 +24,7 @@ function Footer() {
                 <Box>
                     <IconButton aria-label="Discord" href={info.discord}>
                         <Image
-                            src="/8discord.svg"
+                            src={DiscordIcon}
                             alt="Discord"
                             width="40px"
                             height="40px"
