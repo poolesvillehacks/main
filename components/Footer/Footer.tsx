@@ -9,12 +9,8 @@ import Image from "next/image"
 function Footer() {
     const info = {
         discord: "https://discord.gg/UbBbwypAwk",
-<<<<<<< HEAD
         instagram: "https://instagram.com/poolesvillehacks",
         email: "mailto:poolesvillehacks@gmail.com"
-=======
-        instagram: "https://instagram.com/poolesvillehacks"
->>>>>>> 61260e23bba0c2cd5cde79d801f81dacb8a8af42
     };
     return (
         <footer>
