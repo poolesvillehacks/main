@@ -11,7 +11,6 @@ function Footer() {
         discord: "https://discord.gg/UbBbwypAwk",
         instagram: "https://instagram.com/poolesvillehacks",
         email: "mailto:poolesvillehacks@gmail.com"
-
     };
     return (
         <footer>
