@@ -1,6 +1,7 @@
 import {Container, Typography, Box, IconButton, SvgIcon} from "@mui/material";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
+import EmailIcon from "@mui/icons-material/Email";
 import  DiscordIcon  from "../../public/8discord.svg";
 
 import Image from "next/image"
@@ -8,7 +9,8 @@ import Image from "next/image"
 function Footer() {
     const info = {
         discord: "https://discord.gg/UbBbwypAwk",
-        instagram: "https://instagram.com/poolesvillehacks"
+        instagram: "https://instagram.com/poolesvillehacks",
+        email: "mailto:poolesvillehacks@gmail.com"
     };
     return (
         <footer>
@@ -36,6 +38,13 @@ function Footer() {
                         href={info.instagram}
                     >
                         <InstagramIcon fontSize="inherit" />
+                    </IconButton>
+                    <IconButton
+                        aria-label="poolesvillehacks@gmail.com"
+                        size="large"
+                        href={info.email}
+                    >
+                        <EmailIcon fontSize="inherit" />
                     </IconButton>
                 </Box>
                 <Typography textAlign="center" variant="body2">

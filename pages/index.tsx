@@ -13,7 +13,11 @@ import {
     CardContent,
     CardActions,
     Box,
+    Accordion,
+    AccordionSummary,
+    AccordionDetails,
 } from "@mui/material";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
 
 // let theDate = "5/20/2022 6:00 PM"
@@ -50,6 +54,20 @@ const sponsorships = [
     },
 
 ];
+const FAQs = [
+    {
+        question: "What is a \"hackathon\"?",
+        answer: "A hackathon is an event where programmers work together in order to create a programmatic solution to a problem."
+    },
+    {
+        question: "What if I have no programming experience?",
+        answer: "Beginners are both welcomed and encouraged. We will have workshops over the course of the hackathon that can teach you the basics of programming."
+    },
+    {
+        question: "Is this event free?",
+        answer: "poolesville_hacks is completely free for all elementary, middle, and high schoolers! All you need to do is sign up."
+    }
+]
 
 const Home: NextPage = () => {
     return (
@@ -126,9 +144,6 @@ const Home: NextPage = () => {
                                 competitive prize. Participating is completely
                                 free and is a great chance to test your
                                 technical skills and win great prizes.
-                                Additionally, workshops will be hosted during
-                                the event that aim to introduce students to
-                                skills used in the professional field.
                             </Typography>
                         </Grid>
                         <Grid
@@ -195,22 +210,56 @@ const Home: NextPage = () => {
                     </Button>
                 </Link>
             </Container>
+            <Container sx={{ py: { xs: 4, md: 10 } }}>
+                <Typography component="h2" variant="h4" gutterBottom>
+                    Frequently Asked Questions
+                </Typography>
+                {FAQs.map((q) => (
+                    <Accordion
+                        sx={{ bgcolor: "primary.dark" }}
+                        key={q.question}
+                        elevation={0}
+                    >
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                        >
+                            <Typography>{q.question}</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography>
+                                {q.answer}
+                            </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                ))}
+            </Container>
             <Container
                 sx={{
                     py: { xs: 4, md: 10 },
                     display: "flex",
                     alignItems: "center",
-                    flexDirection: "column" 
+                    flexDirection: "column",
                 }}
                 id="sponsors"
             >
-                <Typography variant="h3" >Made Possible By</Typography>
+                <Typography variant="h4">Made Possible By</Typography>
                 {sponsorships.map((sponsor) => (
-                    <Button key={sponsor.name} href={sponsor.url} sx={{
-                        width: 400,
-                        height: 100
-                    }}>
-                        <Image src={sponsor.path} objectFit="cover" layout="fill" alt={sponsor.name}></Image>
+                    <Button
+                        key={sponsor.name}
+                        href={sponsor.url}
+                        sx={{
+                            width: 400,
+                            height: 100,
+                        }}
+                    >
+                        <Image
+                            src={sponsor.path}
+                            objectFit="cover"
+                            layout="fill"
+                            alt={sponsor.name}
+                        ></Image>
                     </Button>
                 ))}
             </Container>
