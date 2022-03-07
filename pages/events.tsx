@@ -38,13 +38,7 @@ const Events: NextPage = () => {
             time: "6:00 PM EST",
             location: "Zoom",
         },
-        {
-            id:3,
-            name: "Kick-Start Game (To generate ideas!)",
-            data: "5/20",
-            time: "5:00 PM EST",
-            location: "Zoom and Website!"
-        },
+       
     ];
     return (
         <>
