@@ -44,7 +44,7 @@ const Events: NextPage = () => {
             data: "5/20",
             time: "5:00 PM EST",
             location: "Zoom and Website!"
-        }
+        },
     ];
     return (
         <>
