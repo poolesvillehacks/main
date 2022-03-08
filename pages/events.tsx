@@ -38,6 +38,7 @@ const Events: NextPage = () => {
             time: "6:00 PM EST",
             location: "Zoom",
         },
+       
     ];
     return (
         <>
