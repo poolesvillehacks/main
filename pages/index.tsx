@@ -46,13 +46,18 @@ import Image from "next/image";
 // };
 // let time = getTime(theDate).join(":");
 import leadinglearners from "../public/leadinglearners.png";
+import wolfram from "../public/ad.png"
 const sponsorships = [
     {
         name: "Leading Learners",
         url: "https://www.leading-learners.com/",
         path: leadinglearners,
     },
-
+    {
+        name: "Wolfram Language",
+        url: "https://www.wolfram.com/language/",
+        path: wolfram,
+    },
 ];
 const FAQs = [
     {
@@ -228,9 +233,7 @@ const Home: NextPage = () => {
                             <Typography>{q.question}</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                            <Typography>
-                                {q.answer}
-                            </Typography>
+                            <Typography>{q.answer}</Typography>
                         </AccordionDetails>
                     </Accordion>
                 ))}
@@ -245,23 +248,23 @@ const Home: NextPage = () => {
                 id="sponsors"
             >
                 <Typography variant="h4">Made Possible By</Typography>
-                {sponsorships.map((sponsor) => (
-                    <Button
-                        key={sponsor.name}
-                        href={sponsor.url}
-                        sx={{
-                            width: 400,
-                            height: 100,
-                        }}
-                    >
-                        <Image
-                            src={sponsor.path}
-                            objectFit="cover"
-                            layout="fill"
-                            alt={sponsor.name}
-                        ></Image>
-                    </Button>
-                ))}
+                <Box sx={{display: "flex", gap: "15px"}}>
+                    {sponsorships.map((sponsor) => (
+                        <Button
+                            key={sponsor.name}
+                            href={sponsor.url}
+                   
+                        >
+                            <Image
+                                src={sponsor.path}
+                                objectFit="contain"
+                                 width={400}
+                                height={100}
+                                alt={sponsor.name}
+                            ></Image>
+                        </Button>
+                    ))}
+                </Box>
             </Container>
         </>
     );
