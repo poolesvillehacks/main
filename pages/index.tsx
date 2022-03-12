@@ -16,9 +16,14 @@ import {
     Accordion,
     AccordionSummary,
     AccordionDetails,
+    Dialog,
+    DialogContent,
+    DialogContentText,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
+
+import { useState } from "react";
 
 // let theDate = "5/20/2022 6:00 PM"
 
@@ -46,7 +51,7 @@ import Image from "next/image";
 // };
 // let time = getTime(theDate).join(":");
 import leadinglearners from "../public/leadinglearners.png";
-import wolfram from "../public/ad.png"
+import wolfram from "../public/ad.png";
 const sponsorships = [
     {
         name: "Leading Learners",
@@ -61,20 +66,30 @@ const sponsorships = [
 ];
 const FAQs = [
     {
-        question: "What is a \"hackathon\"?",
-        answer: "A hackathon is an event where programmers work together in order to create a programmatic solution to a problem."
+        question: 'What is a "hackathon"?',
+        answer: "A hackathon is an event where programmers work together in order to create a programmatic solution to a problem.",
     },
     {
         question: "What if I have no programming experience?",
-        answer: "Beginners are both welcomed and encouraged. We will have workshops over the course of the hackathon that can teach you the basics of programming."
+        answer: "Beginners are both welcomed and encouraged. We will have workshops over the course of the hackathon that can teach you the basics of programming.",
     },
     {
         question: "Is this event free?",
-        answer: "poolesville_hacks is completely free for all elementary, middle, and high schoolers! All you need to do is sign up."
-    }
-]
+        answer: "poolesville_hacks is completely free for all elementary, middle, and high schoolers! All you need to do is sign up.",
+    },
+];
 
 const Home: NextPage = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <>
             <Container
@@ -140,15 +155,13 @@ const Home: NextPage = () => {
                                 color="primary.contrastText"
                             >
                                 poolesville_hacks is a school-wide hackathon
-                                club that hosts aims to around four hackathons
+                                club that hosts aims to around two hackathons
                                 throughout the year. Started by PHS students,
                                 the hackathon&apos;s objective is to develop
                                 creative and technical skills. Participants will
                                 design, prototype, and present their projects to
                                 a panel of judges and have a chance to win a
-                                competitive prize. Participating is completely
-                                free and is a great chance to test your
-                                technical skills and win great prizes.
+                                competitive prize.
                             </Typography>
                         </Grid>
                         <Grid
@@ -170,7 +183,13 @@ const Home: NextPage = () => {
                                     mx: 2,
                                 }}
                             >
-                                <CardContent>
+                                <CardContent
+                                    sx={{
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        height: "100%",
+                                    }}
+                                >
                                     <Typography
                                         component="h2"
                                         variant="h5"
@@ -184,9 +203,33 @@ const Home: NextPage = () => {
                                         component="h2"
                                         variant="body1"
                                         color="secondary.contrastText"
-                                        sx={{ fontWeight: 600 }}
-                                    ></Typography>
-                                    {/* <Countdown time={time} /> */}
+                                        sx={{ fontWeight: 600, flexGrow: 1 }}
+                                    >
+                                        Estimated: 5/20 <br></br>Updates to
+                                        come!
+                                    </Typography>
+                                    <Button
+                                        color="primary"
+                                        variant="contained"
+                                        sx={{ width: 150, alignSelf: "center" }}
+                                        onClick={handleClickOpen}
+                                    >
+                                        <Typography variant="subtitle1">
+                                            Register
+                                        </Typography>
+                                    </Button>
+                                    <Dialog
+                                        open={open}
+                                        onClose={handleClose}
+                                        aria-labelledby="alert-dialog-title"
+                                        aria-describedby="alert-dialog-description"
+                                    >
+                                        <DialogContent>
+                                            <DialogContentText color="white" id="alert-dialog-description">
+                                                {"Sorry! Registration isn't open yet."}
+                                            </DialogContentText>
+                                        </DialogContent>
+                                    </Dialog>
                                 </CardContent>
                             </Card>
                         </Grid>
@@ -248,17 +291,13 @@ const Home: NextPage = () => {
                 id="sponsors"
             >
                 <Typography variant="h4">Made Possible By</Typography>
-                <Box sx={{display: "flex", gap: "15px"}}>
+                <Box sx={{ display: "flex", gap: "15px" }}>
                     {sponsorships.map((sponsor) => (
-                        <Button
-                            key={sponsor.name}
-                            href={sponsor.url}
-                   
-                        >
+                        <Button key={sponsor.name} href={sponsor.url}>
                             <Image
                                 src={sponsor.path}
                                 objectFit="contain"
-                                 width={400}
+                                width={400}
                                 height={100}
                                 alt={sponsor.name}
                             ></Image>
