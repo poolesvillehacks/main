@@ -273,10 +273,10 @@ const Home: NextPage = () => {
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <Typography>{q.question}</Typography>
+                            <Typography component="p" variant="subtitle2">{q.question}</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
-                            <Typography>{q.answer}</Typography>
+                            <Typography component="p" variant="body1">{q.answer}</Typography>
                         </AccordionDetails>
                     </Accordion>
                 ))}

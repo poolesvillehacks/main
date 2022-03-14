@@ -30,6 +30,9 @@ const theme = createTheme({
             minWidth: 125,
         },
         fontFamily: ["Montserrat"].join(","),
+        body1: {
+            fontFamily: "Hind",
+        },
     },
 });
 
