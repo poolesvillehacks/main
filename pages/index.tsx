@@ -250,8 +250,8 @@ const Home: NextPage = () => {
                     >
                         poolesville_hacks is a school-wide hackathon club that
                         hosts aims to around two hackathons throughout the year.
-                        Started by PHS students, the hackathon's objective is to
-                        develop creative and technical skills.
+                        Started by PHS students, the hackathon&apos;s objective
+                        is to develop creative and technical skills.
                         <br></br>
                         <br></br>Participants will design, prototype, and
                         present their projects to a panel of judges and have a
@@ -373,6 +373,7 @@ const Home: NextPage = () => {
                     right: -30,
                     transform: "translateY(-60px)",
                     scrollMarginTop: "5vh",
+    
                 }}
             >
                 FAQ
@@ -395,7 +396,7 @@ const Home: NextPage = () => {
                     <Accordion
                         sx={{
                             bgcolor: "secondary.main",
-                            width: 900,
+                            width: { sm: "100%", md: 900 },
                         }}
                         key={q.question}
                     >
@@ -429,12 +430,12 @@ const Home: NextPage = () => {
                 color="#373737"
                 component="h5"
                 variant="h5"
-                id="about"
                 sx={{
                     position: "absolute",
                     left: -30,
                     transform: "translateY(-60px)",
                     scrollMarginTop: "5vh",
+                    textOverflow: "hidden",
                 }}
             >
                 SPONSORS
