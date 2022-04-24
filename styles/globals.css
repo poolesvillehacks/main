@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&family=Oxygen:wght@300;400;700&family=Russo+One&display=swap');
 * {
     padding: 0;
     margin: 0;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
+    font-family: apple-system, BlinkMacSystemFont, Segoe UI,
         Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
         sans-serif;
     
@@ -10,11 +10,9 @@
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     min-height: 100vh;
-}
-
-p {
-    font-family: 'Hind', sans-serif;
+    overflow-x: hidden;
 }
