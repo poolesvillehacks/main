@@ -53,7 +53,7 @@ import { useTheme } from "@mui/material/styles";
 // let time = getTime(theDate).join(":");
 import leadinglearners from "../public/leadinglearners.png";
 import wolfram from "../public/ad.png";
-import canva from "../public/canva.svg"
+import canva from "../public/canva.svg";
 const sponsorships = [
     {
         name: "Leading Learners",
@@ -68,7 +68,7 @@ const sponsorships = [
     {
         name: "Canva",
         url: "https://www.canva.com/",
-        path: canva
+        path: canva,
     },
 ];
 const FAQs = [
@@ -248,18 +248,14 @@ const Home: NextPage = () => {
                             },
                         }}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Facilisis nulla est mattis massa. Enim faucibus
-                        suspendisse dictumst sit egestas purus lorem. Leo lectus
-                        viverra bibendum dictum consectetur nullam in enim.
-                        Luctus est tortor viverra habitasse sem pretium. Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit.
-                        <br />
-                        <br />
-                        Facilisis nulla est mattis massa. Enim faucibus
-                        suspendisse dictumst sit egestas purus lorem. Leo lectus
-                        viverra bibendum dictum consectetur nullam in enim.
-                        Luctus est tortor viverra habitasse sem pretium.
+                        poolesville_hacks is a school-wide hackathon club that
+                        hosts aims to around two hackathons throughout the year.
+                        Started by PHS students, the hackathon's objective is to
+                        develop creative and technical skills.
+                        <br></br>
+                        <br></br>Participants will design, prototype, and
+                        present their projects to a panel of judges and have a
+                        chance to win a competitive prize.
                     </Typography>
                 </Box>
                 <Box
