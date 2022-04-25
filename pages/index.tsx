@@ -311,7 +311,7 @@ const Home: NextPage = () => {
                                 },
                             }}
                         >
-                            24:&#8203;00:&#8203;00
+                            25:&#8203;00:&#8203;00
                         </Typography>
                         <Typography
                             color="#707070"
@@ -373,7 +373,6 @@ const Home: NextPage = () => {
                     right: -30,
                     transform: "translateY(-60px)",
                     scrollMarginTop: "5vh",
-    
                 }}
             >
                 FAQ
@@ -453,9 +452,23 @@ const Home: NextPage = () => {
                 <Typography variant="h1" gutterBottom>
                     Made Possible By
                 </Typography>
-                <Box sx={{ display: "flex", gap: "15px", mt: 6 }}>
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: "15px",
+                        my: 6,
+                        flexWrap: "wrap",
+                    }}
+                >
                     {sponsorships.map((sponsor) => (
-                        <Button key={sponsor.name} href={sponsor.url}>
+                        <Button
+                            sx={{
+                                width: 400,
+                                height: 100,
+                            }}
+                            key={sponsor.name}
+                            href={sponsor.url}
+                        >
                             <Image
                                 src={sponsor.path}
                                 objectFit="contain"
@@ -466,6 +479,19 @@ const Home: NextPage = () => {
                         </Button>
                     ))}
                 </Box>
+                <Typography variant="h2" sx={{fontSize: "2rem"}} gutterBottom>
+                    Want to sponsor?
+                </Typography>
+                <Button
+                    variant="contained"
+                    color="secondary"
+                    sx={{
+                        mb: 3,
+                    }}
+                    href="/poolesville_hacks_sponsorship_brochure.pdf"
+                >
+                    Sponsorship Brochure
+                </Button>
             </Container>
             {/* <Container
                 sx={{
