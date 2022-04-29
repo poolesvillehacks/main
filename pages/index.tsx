@@ -53,6 +53,7 @@ import { useTheme } from "@mui/material/styles";
 // let time = getTime(theDate).join(":");
 import leadinglearners from "../public/leadinglearners.png";
 import wolfram from "../public/ad.png";
+import echo3D from "../public/echo3D.png"
 import canva from "../public/canva.svg";
 const sponsorships = [
     {
@@ -70,6 +71,11 @@ const sponsorships = [
         url: "https://www.canva.com/",
         path: canva,
     },
+    {
+        name: "echo3D",
+        url: "https://console.echo3d.co/#/auth/register-promo?code=PoolesvilleHacks",
+        path: echo3D
+    }
 ];
 const FAQs = [
     {
@@ -458,6 +464,8 @@ const Home: NextPage = () => {
                         gap: "15px",
                         my: 6,
                         flexWrap: "wrap",
+                        alignItems: "center",
+                        justifyContent: "center"
                     }}
                 >
                     {sponsorships.map((sponsor) => (
