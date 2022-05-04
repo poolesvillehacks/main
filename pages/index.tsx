@@ -169,7 +169,7 @@ const Home: NextPage = () => {
                         sx={{ color: "#716A48" }}
                         gutterBottom
                     >
-                        May 20, 2022 - May 22, 2022
+                        May 27, 2022 - May 29, 2022
                     </Typography>
                     <Box
                         sx={{
@@ -328,7 +328,7 @@ const Home: NextPage = () => {
                             }}
                             gutterBottom
                         >
-                            May 20th, 2022
+                            May 27th, 2022
                         </Typography>
                         <Typography
                             color="#212121"
