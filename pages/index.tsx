@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar/Navbar";
-import Countdown from "../components/Countdown/Countdown";
+import CountDown from "../components/Countdown/Countdown";
 import {
     Container,
     Typography,
@@ -27,6 +27,7 @@ import { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 
 // let theDate = "5/20/2022 6:00 PM"
+
 
 // const getTime = (date: string) => {
 //     let datefuture = new Date(date);
@@ -297,28 +298,7 @@ const Home: NextPage = () => {
                         >
                             Next Hackathon in
                         </Typography>
-                        <Typography
-                            color="#212121"
-                            variant="h1"
-                            sx={{
-                                lineHeight: "0.9",
-                                [theme.breakpoints.up("xs")]: {
-                                    fontSize: "5rem",
-                                },
-                                [theme.breakpoints.up("sm")]: {
-                                    fontSize: "6rem",
-                                },
-
-                                [theme.breakpoints.up("md")]: {
-                                    fontSize: "5rem",
-                                },
-                                [theme.breakpoints.up("lg")]: {
-                                    fontSize: "7rem",
-                                },
-                            }}
-                        >
-                            25:&#8203;00:&#8203;00
-                        </Typography>
+                        <CountDown/>
                         <Typography
                             color="#707070"
                             variant="h3"
