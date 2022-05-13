@@ -52,6 +52,15 @@ import { useTheme } from "@mui/material/styles";
 //     return [days, hours, minutes];
 // };
 // let time = getTime(theDate).join(":");
+import savemycents from "../public/smc.png"
+const premiumSponsorships = [
+    {
+        name: "Save My Cents",
+        url: "/",
+        path: savemycents,
+    },
+];
+
 import leadinglearners from "../public/leadinglearners.png";
 import wolfram from "../public/ad.png";
 import echo3D from "../public/echo3D.png"
@@ -95,6 +104,7 @@ const sponsorships = [
         url: "https://replit.com/redeem?code=poolesvillehacks",
         path: replit,
     },
+    
 ];
 const FAQs = [
     {
@@ -316,7 +326,7 @@ const Home: NextPage = () => {
                         >
                             Next Hackathon in
                         </Typography>
-                        <CountDown/>
+                        <CountDown />
                         <Typography
                             color="#707070"
                             variant="h3"
@@ -460,10 +470,39 @@ const Home: NextPage = () => {
                     sx={{
                         display: "flex",
                         gap: "15px",
+               
+                        flexWrap: "wrap",
+                        alignItems: "center",
+                        justifyContent: "center",
+                    }}
+                >
+                    {premiumSponsorships.map((sponsor) => (
+                        <Button
+                            sx={{
+                                width: 600,
+                                height: 100,
+                            }}
+                            key={sponsor.name}
+                            href={sponsor.url}
+                        >
+                            <Image
+                                src={sponsor.path}
+                                objectFit="contain"
+                                width={600}
+                                height={100}
+                                alt={sponsor.name}
+                            ></Image>
+                        </Button>
+                    ))}
+                </Box>
+                <Box
+                    sx={{
+                        display: "flex",
+                        gap: "15px",
                         my: 6,
                         flexWrap: "wrap",
                         alignItems: "center",
-                        justifyContent: "center"
+                        justifyContent: "center",
                     }}
                 >
                     {sponsorships.map((sponsor) => (
@@ -478,14 +517,14 @@ const Home: NextPage = () => {
                             <Image
                                 src={sponsor.path}
                                 objectFit="contain"
-                                width={400}
-                                height={100}
+                                width={300}
+                                height={75}
                                 alt={sponsor.name}
                             ></Image>
                         </Button>
                     ))}
                 </Box>
-                <Typography variant="h2" sx={{fontSize: "2rem"}} gutterBottom>
+                <Typography variant="h2" sx={{ fontSize: "2rem" }} gutterBottom>
                     Want to sponsor?
                 </Typography>
                 <Button
