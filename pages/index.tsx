@@ -56,6 +56,9 @@ import leadinglearners from "../public/leadinglearners.png";
 import wolfram from "../public/ad.png";
 import echo3D from "../public/echo3D.png"
 import canva from "../public/canva.svg";
+import loc from "../public/library_of_code.png"
+import hc from "../public/hc.png"
+import replit from "../public/replit.png"
 const sponsorships = [
     {
         name: "Leading Learners",
@@ -75,8 +78,23 @@ const sponsorships = [
     {
         name: "echo3D",
         url: "https://console.echo3d.co/#/auth/register-promo?code=PoolesvilleHacks",
-        path: echo3D
-    }
+        path: echo3D,
+    },
+    {
+        name: "Library Of Code",
+        url: "https://www.libraryofcode.org",
+        path: loc,
+    },
+    {
+        name: "Hack Club",
+        url: "https://hackclub.com/",
+        path: hc,
+    },
+    {
+        name: "Replit",
+        url: "https://replit.com/redeem?code=poolesvillehacks",
+        path: replit,
+    },
 ];
 const FAQs = [
     {
