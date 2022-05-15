@@ -110,16 +110,6 @@ function Navbar() {
                                     Schedule
                                 </Typography>
                             </Link>
-                            <Link href="/" passHref>
-                                <Typography
-                                    component="a"
-                                    color="white"
-                                    variant="h6"
-                                    sx={{ fontWeight: 400 }}
-                                >
-                                    Join Us
-                                </Typography>
-                            </Link>
                             <Link href="/join" passHref>
                                 <Button
                                     color="secondary"
@@ -211,20 +201,6 @@ function Navbar() {
                                             onClick={toggleDrawer(false)}
                                         >
                                             Schedule
-                                        </Typography>
-                                    </Link>
-                                    <Link href="/" passHref>
-                                        <Typography
-                                            component="a"
-                                            color="primary.main"
-                                            variant="h6"
-                                            sx={{
-                                                fontWeight: 400,
-                                                fontSize: "2rem",
-                                            }}
-                                            onClick={toggleDrawer(false)}
-                                        >
-                                            Join Us
                                         </Typography>
                                     </Link>
                                     <Box

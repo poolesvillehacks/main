@@ -9,7 +9,7 @@ import Image from "next/image"
 function Footer() {
     const info = {
         discord: "https://discord.gg/UbBbwypAwk",
-        instagram: "https://instagram.com/poolesvillehacks",
+        instagram: "https://instagram.com/poolesville_hacks",
         email: "mailto:poolesvillehacks@gmail.com"
     };
     return (
@@ -24,7 +24,11 @@ function Footer() {
                 }}
             >
                 <Box>
-                    <IconButton aria-label="Discord" href={info.discord}>
+                    <IconButton
+                        aria-label="Discord"
+                        href={info.discord}
+                        target="_blank"
+                    >
                         <Image
                             src={DiscordIcon}
                             alt="Discord"
@@ -35,6 +39,7 @@ function Footer() {
                     <IconButton
                         aria-label="Instagram"
                         size="large"
+                        target="_blank"
                         href={info.instagram}
                     >
                         <InstagramIcon fontSize="inherit" />
@@ -43,6 +48,7 @@ function Footer() {
                         aria-label="poolesvillehacks@gmail.com"
                         size="large"
                         href={info.email}
+                        target="_blank"
                     >
                         <EmailIcon fontSize="inherit" />
                     </IconButton>
@@ -51,6 +57,9 @@ function Footer() {
                     © poolesville_hacks 2022
                     <br></br>
                     This site is under construction 🚧
+                    <br></br>
+                    poolesville_hacks is fiscally sponsored by The Hack
+                    Foundation. EIN: 81-2908499
                 </Typography>
             </Container>
         </footer>

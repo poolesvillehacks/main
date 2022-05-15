@@ -56,7 +56,7 @@ import savemycents from "../public/smc.png"
 const premiumSponsorships = [
     {
         name: "Save My Cents",
-        url: "/",
+        url: "https://savemycents.com/",
         path: savemycents,
     },
 ];
@@ -109,15 +109,23 @@ const sponsorships = [
 const FAQs = [
     {
         question: 'What is a "hackathon"?',
-        answer: "A hackathon is an event where programmers work together in order to create a programmatic solution to a problem.",
+        answer: "A hackathon is an programming competition where programmers work together in order to create a programmatic solution to a problem in a short amount of time.",
     },
     {
         question: "What if I have no programming experience?",
-        answer: "Beginners are both welcomed and encouraged. We will have workshops over the course of the hackathon that can teach you the basics of programming.",
+        answer: "Beginners are both welcomed and encouraged. We will have workshops over the course of the hackathon that can teach you the basics of programming. Additionally, we will have a 'Beginners Only' track for you to participate in.",
     },
     {
         question: "Is this event free?",
         answer: "poolesville_hacks is completely free for all elementary, middle, and high schoolers! All you need to do is sign up.",
+    },
+    {
+        question: "What's the club for?",
+        answer: "The poolesville_hacks club is mainly for developing the hackathon. You can join if you want to help! Just email us.",
+    },
+    {
+        question: "Can I work with my friends?",
+        answer: "Collaboration is not only allowed, it's encouraged. If you can't find a team, feel free to check out our Discord or work alone. However, we have a maximum of 4 people per team.",
     },
 ];
 
@@ -470,7 +478,7 @@ const Home: NextPage = () => {
                     sx={{
                         display: "flex",
                         gap: "15px",
-               
+
                         flexWrap: "wrap",
                         alignItems: "center",
                         justifyContent: "center",
@@ -479,7 +487,7 @@ const Home: NextPage = () => {
                     {premiumSponsorships.map((sponsor) => (
                         <Button
                             sx={{
-                                width: 600,
+                                width: {sm: 400, md: 600, xs: 300},
                                 height: 100,
                             }}
                             key={sponsor.name}
@@ -488,8 +496,7 @@ const Home: NextPage = () => {
                             <Image
                                 src={sponsor.path}
                                 objectFit="contain"
-                                width={600}
-                                height={100}
+                                layout="fill"
                                 alt={sponsor.name}
                             ></Image>
                         </Button>
