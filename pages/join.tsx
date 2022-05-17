@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 
 import { Container, Box, Typography, Button } from "@mui/material";
-
+import Link from "next/link";
+import { NoEncryption } from "@mui/icons-material";
 const Join: NextPage = () => {
     return (
         <>
@@ -9,16 +10,90 @@ const Join: NextPage = () => {
                 sx={{
                     minHeight: "75vh",
                     display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
+
+                    flexDirection: "column",
                     py: 8,
                     gap: "30px",
                     flexWrap: "wrap",
                 }}
             >
-                <Typography>
-                    Registration hasn&apos;t opened yet!
+                <Typography variant="h1">Register</Typography>
+
+                <Typography
+                    color="secondary"
+                    variant="h2"
+                    sx={{
+                        display: "flex",
+                    }}
+                >
+                    1. Join the Discord at&nbsp;
+                    <Link href="https://discord.gg/shsw6ykadD" passHref>
+                        <Typography
+                            component="a"
+                            variant="h2"
+                            sx={{
+                                textDecoration: "underline",
+                            }}
+                        >
+                            https://discord.gg/shsw6ykadD
+                        </Typography>
+                    </Link>
                 </Typography>
+
+                <Typography
+                    color="secondary"
+                    variant="h2"
+                    sx={{
+                        display: "flex",
+                    }}
+                >
+                    2. Register on DevPost&nbsp;
+                    <Link href="https://poolesvillehacks.devpost.com/" passHref>
+                        <Typography
+                            component="a"
+                            variant="h2"
+                            sx={{
+                                textDecoration: "underline",
+                            }}
+                        >
+                            https://poolesvillehacks.devpost.com/
+                        </Typography>
+                    </Link>
+                </Typography>
+                <Typography
+                    color="secondary"
+                    variant="h2"
+                    sx={{
+                        display: "flex",
+                    }}
+                >
+                    3. Fill out the Google Form below&nbsp;
+                    <Link
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSd6yjOsTkTbv1Dt9d5hkAO4BxLZfpHUYY6I7RCF3NP7T6OZcQ/viewform?usp=sf_link"
+                        passHref
+                    >
+                        <Typography
+                            component="a"
+                            variant="h2"
+                            sx={{
+                                textDecoration: "underline",
+                            }}
+                        >
+                            https://forms.gle/UxCgE8VkbmzodxSS8
+                        </Typography>
+                    </Link>
+                </Typography>
+                <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSd6yjOsTkTbv1Dt9d5hkAO4BxLZfpHUYY6I7RCF3NP7T6OZcQ/viewform?embedded=true"
+                    width="640"
+                    height="640"
+                    style={{
+                        border: "none",
+                        alignSelf: "center"
+                    }}
+                >
+                    Loading…
+                </iframe>
                 {/* <Button
                     color="inherit"
                     variant="outlined"
