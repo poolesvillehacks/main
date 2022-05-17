@@ -28,7 +28,6 @@ import { useTheme } from "@mui/material/styles";
 
 // let theDate = "5/20/2022 6:00 PM"
 
-
 // const getTime = (date: string) => {
 //     let datefuture = new Date(date);
 //     datefuture.toLocaleString("en-US", { timeZone: "America/New_York" });
@@ -52,7 +51,7 @@ import { useTheme } from "@mui/material/styles";
 //     return [days, hours, minutes];
 // };
 // let time = getTime(theDate).join(":");
-import savemycents from "../public/smc.png"
+import savemycents from "../public/smc.png";
 const premiumSponsorships = [
     {
         name: "Save My Cents",
@@ -63,11 +62,11 @@ const premiumSponsorships = [
 
 import leadinglearners from "../public/leadinglearners.png";
 import wolfram from "../public/ad.png";
-import echo3D from "../public/echo3D.png"
+import echo3D from "../public/echo3D.png";
 import canva from "../public/canva.svg";
-import loc from "../public/library_of_code.png"
-import hc from "../public/hc.png"
-import replit from "../public/replit.png"
+import loc from "../public/library_of_code.png";
+import hc from "../public/hc.png";
+import replit from "../public/replit.png";
 const sponsorships = [
     {
         name: "Leading Learners",
@@ -104,12 +103,15 @@ const sponsorships = [
         url: "https://replit.com/redeem?code=poolesvillehacks",
         path: replit,
     },
-    
 ];
 const FAQs = [
     {
         question: 'What is a "hackathon"?',
         answer: "A hackathon is an programming competition where programmers work together in order to create a programmatic solution to a problem in a short amount of time.",
+    },
+    {
+        question: "Do you guys actually hack?",
+        answer: "The \"hack\" in hackathon doesn't actually mean infiltrating a system or computer. It's a lot simpler than that. In this context, hacking means creating a rough solution to a problem, so a hackathon would be a coding marathon where teams attempt to create a solution to a problem.",
     },
     {
         question: "What if I have no programming experience?",
@@ -217,8 +219,8 @@ const Home: NextPage = () => {
                         <Button
                             color="secondary"
                             variant="contained"
-                            href="https://forms.gle/yaoMLbipLd9k9F7HA"
-                            target="_blank"
+                            href="/join"
+
                             sx={{ borderRadius: "10px" }}
                         >
                             Register
@@ -487,7 +489,7 @@ const Home: NextPage = () => {
                     {premiumSponsorships.map((sponsor) => (
                         <Button
                             sx={{
-                                width: {sm: 400, md: 600, xs: 300},
+                                width: { sm: 400, md: 600, xs: 300 },
                                 height: 100,
                             }}
                             key={sponsor.name}
