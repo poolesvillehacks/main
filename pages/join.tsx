@@ -26,7 +26,7 @@ const Join: NextPage = () => {
                         display: "flex",
                     }}
                 >
-                    1. Join the Discord at&nbsp;
+                    1. Join the Discord&nbsp;
                     <Link href="https://discord.gg/shsw6ykadD" passHref>
                         <Typography
                             component="a"
@@ -35,7 +35,7 @@ const Join: NextPage = () => {
                                 textDecoration: "underline",
                             }}
                         >
-                            https://discord.gg/shsw6ykadD
+                            here
                         </Typography>
                     </Link>
                 </Typography>
@@ -56,16 +56,14 @@ const Join: NextPage = () => {
                                 textDecoration: "underline",
                             }}
                         >
-                            https://poolesvillehacks.devpost.com/
+                            here
                         </Typography>
                     </Link>
                 </Typography>
                 <Typography
                     color="secondary"
                     variant="h2"
-                    sx={{
-                        display: "flex",
-                    }}
+
                 >
                     3. Fill out the Google Form below&nbsp;
                     <Link
@@ -79,7 +77,7 @@ const Join: NextPage = () => {
                                 textDecoration: "underline",
                             }}
                         >
-                            https://forms.gle/UxCgE8VkbmzodxSS8
+                            or click this link
                         </Typography>
                     </Link>
                 </Typography>
@@ -89,7 +87,8 @@ const Join: NextPage = () => {
                     height="640"
                     style={{
                         border: "none",
-                        alignSelf: "center"
+                        alignSelf: "center",
+                        width: "100%"
                     }}
                 >
                     Loading…
