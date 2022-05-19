@@ -2,19 +2,9 @@ import type { NextPage } from "next";
 
 import Link from "next/link";
 
-import {
-    Container,
-    Box,
-    Typography
+import { Container, Box, Typography } from "@mui/material";
 
-} from "@mui/material";
-
-import {    DataGrid,
-    GridRowsProp, 
-    GridColDef} from "@mui/x-data-grid"
-
-
-
+import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
 
 const Events: NextPage = () => {
     const columns: GridColDef[] = [
@@ -41,7 +31,13 @@ const Events: NextPage = () => {
             id: 30,
             name: "Workshop: How to be successful with learning a programming language",
             date: "5/28",
-            time: "1:00 PM EDT"
+            time: "1:00 PM EDT",
+        },
+        {
+            id: 29,
+            name: "Clash Royale Tournament",
+            date: "5/28",
+            time: "7:00 PM EDT",
         },
         {
             id: 20,
