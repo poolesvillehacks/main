@@ -52,11 +52,23 @@ import { useTheme } from "@mui/material/styles";
 // };
 // let time = getTime(theDate).join(":");
 import savemycents from "../public/smc.png";
+import eli from "../public/eli.png";
+import feasible from "../public/feasible.png";
 const premiumSponsorships = [
     {
         name: "Save My Cents",
         url: "https://savemycents.com/",
         path: savemycents,
+    },
+    {
+        name: "Eli Qian",
+        url: "https://eliqian.com/",
+        path: eli,
+    },
+    {
+        name: "Feasible",
+        url: "https://www.feasible.io/",
+        path: feasible,
     },
 ];
 
@@ -67,6 +79,7 @@ import canva from "../public/canva.svg";
 import loc from "../public/library_of_code.png";
 import hc from "../public/hc.png";
 import replit from "../public/replit.png";
+import hackclubbank from "../public/hackclubbank.png";
 const sponsorships = [
     {
         name: "Leading Learners",
@@ -102,6 +115,11 @@ const sponsorships = [
         name: "Replit",
         url: "https://replit.com/redeem?code=poolesvillehacks",
         path: replit,
+    },
+    {
+        name: "Hack Club Bank",
+        url: "https://hackclub.com/bank/",
+        path: hackclubbank,
     },
 ];
 const FAQs = [
@@ -220,7 +238,6 @@ const Home: NextPage = () => {
                             color="secondary"
                             variant="contained"
                             href="/join"
-
                             sx={{ borderRadius: "10px" }}
                         >
                             Register
