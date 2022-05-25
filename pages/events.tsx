@@ -31,7 +31,7 @@ const Events: NextPage = () => {
             id: 30,
             name: "Workshop: How to be successful with learning a programming language",
             date: "5/28",
-            time: "1:00 PM EDT",
+            time: "11:00 PM EDT",
         },
         {
             id: 29,
