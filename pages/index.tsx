@@ -520,6 +520,9 @@ const Home: NextPage = () => {
                             ></Image>
                         </Button>
                     ))}
+                    <Typography>
+                        Feasible
+                    </Typography>
                 </Box>
                 <Box
                     sx={{
