@@ -29,9 +29,15 @@ const Events: NextPage = () => {
         },
         {
             id: 30,
-            name: "Workshop: How to be successful with learning a programming language",
+            name: "Workshop: How to be successful with learning a programming language - Sylvia Wu",
             date: "5/28",
-            time: "11:00 PM EDT",
+            time: "11:00 AM EDT",
+        },
+        {
+            id: 31,
+            name: "Workshop: Intro to Game Dev - Sam Wiggins",
+            date: "5/28",
+            time: "4:00 PM EDT",
         },
         {
             id: 29,
