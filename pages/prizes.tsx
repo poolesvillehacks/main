@@ -12,12 +12,83 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 
-import zpw from "../public/prizes/rpw.png";
-import ds from "../public/prizes/discord.webp";
-import def from "../public/prizes/def.png";
+import wdqa from "../public/prizes/wdqa.png";
+import ds from "../public/prizes/discrod-nitro-chara.webp";
+import dwefgw from "../public/prizes/dwefgw.png";
+import k552 from "../public/prizes/k552.png"
+import afe from "../public/prizes/afe.png"
 const prizeList = [
     {
         name: "Best Overall",
+        media: (
+            <Image
+                src={k552}
+                width="300px"
+                height="300px"
+                objectFit="contain"
+                alt="Redragon K552"
+            ></Image>
+        ),
+        text: [
+            "Redragon K552",
+            "$10 gift card of choice",
+            "Leading Learners EdTech Bundle",
+        ],
+    },
+    {
+        name: "Best ???",
+        media: (
+            <Image
+                src={dwefgw}
+                width="300px"
+                height="300px"
+                objectFit="contain"
+                alt="Razer Kraken V3 X"
+            ></Image>
+        ),
+        text: [
+            "Razer Kraken V3 X",
+            "1 year of Wolfram|Alpha Pro",
+            "1 year of Wolfram|One",
+            "Leading Learners EdTech Bundle",
+        ],
+    },
+    {
+        name: "Best ???",
+        media: (
+            <Image
+                src={wdqa}
+                width="300px"
+                height="300px"
+                objectFit="contain"
+                alt="Phillips GoZero Self-Cleaning Water Bottle"
+            ></Image>
+        ),
+        text: [
+            "Phillips GoZero Self-Cleaning Water Bottle",
+            "1 year of Canva Pro",
+            "Leading Learners EdTech Bundle",
+        ],
+    },
+    {
+        name: "Beginner",
+        media: (
+            <Image
+                src={afe}
+                width="300px"
+                height="300px"
+                objectFit="contain"
+                alt="Razer Viper Mini"
+            ></Image>
+        ),
+        text: [
+            "Razer Viper Mini",
+            "6 months of Canva Pro",
+            "Leading Learners EdTech Bundle",
+        ],
+    },
+    {
+        name: "Public Favorite",
         media: (
             <Box
                 sx={{
@@ -52,113 +123,6 @@ const prizeList = [
         text: ["$20 gift card of choice", "Leading Learners EdTech Bundle"],
     },
     {
-        name: "Best ???",
-        media: (
-            <Box
-                sx={{
-                    width: "300px",
-                    height: "200px",
-                    position: "relative",
-                    background:
-                        "linear-gradient(113.96deg, #BEBEBE 0%, #585858 100%)",
-                    borderRadius: "15px",
-                }}
-            >
-                <Typography
-                    sx={{
-                        position: "absolute",
-                        width: "75px",
-                        height: "154px",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        fontFamily: "Russo One",
-                        fontWeight: "400",
-                        fontSize: "128px",
-                        lineHeight: "154px",
-
-                        color: "#FFFFFF",
-                    }}
-                >
-                    ?
-                </Typography>
-            </Box>
-        ),
-        text: [
-            "$10 gift card of choice",
-            "1 year of Wolfram|Alpha Pro",
-            "1 year of Wolfram|One",
-            "Leading Learners EdTech Bundle",
-        ],
-    },
-    {
-        name: "Best ???",
-        media: (
-            <Image
-                src={zpw}
-                width="300px"
-                height="200px"
-                alt="Raspberry Pi Zero W"
-            ></Image>
-        ),
-        text: [
-            "Raspberry Pi Zero W",
-            "1 year of Canva Pro",
-            "Leading Learners EdTech Bundle",
-        ],
-    },
-    {
-        name: "Beginner",
-        media: (
-            <Box
-                sx={{
-                    width: "300px",
-                    height: "200px",
-                    position: "relative",
-                    background:
-                        "linear-gradient(113.96deg, #BEBEBE 0%, #585858 100%)",
-                    borderRadius: "15px",
-                }}
-            >
-                <Typography
-                    sx={{
-                        position: "absolute",
-                        width: "75px",
-                        height: "154px",
-                        top: "50%",
-                        left: "50%",
-                        transform: "translate(-50%, -50%)",
-                        fontFamily: "Russo One",
-                        fontWeight: "400",
-                        fontSize: "128px",
-                        lineHeight: "154px",
-
-                        color: "#FFFFFF",
-                    }}
-                >
-                    ?
-                </Typography>
-            </Box>
-        ),
-        text: [
-            "$10 gift card of choice",
-            "6 months of Canva Pro",
-            "Leading Learners EdTech Bundle",
-        ],
-    },
-    {
-        name: "Public Favorite",
-        media: (
-            <Image
-                src={def}
-                width="300px"
-                height="300px"
-                alt="Raspberry Pi Pico"
-            ></Image>
-        ),
-        text: ["Raspberry Pi Pico", "Leading Learners EdTech Bundle"],
-    },
-    {
         name: "Miscellaneous",
         media: (
             <Image
@@ -168,7 +132,11 @@ const prizeList = [
                 alt="Discord Classic"
             ></Image>
         ),
-        text: ["Discord Classic (2)", "Mule Sauce (3)"],
+        text: [
+            "Clash Royale Tournament - Discord Nitro Classic",
+            "Best Participant Award - Discord Nitro Classic",
+            "Raffle - Mule Sauce (3)",
+        ],
     },
 ];
 
@@ -203,7 +171,7 @@ const Prizes: NextPage = () => {
                             sx={{
                                 padding: 3,
                                 borderRadius: "15px",
-                                minHeight: 600,
+                                minHeight: 680,
                                 width: 350,
                             }}
                             key={val.name}
