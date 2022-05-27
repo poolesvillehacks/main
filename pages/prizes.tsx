@@ -36,7 +36,7 @@ const prizeList = [
         ],
     },
     {
-        name: "Best ???",
+        name: "Best Finance",
         media: (
             <Image
                 src={dwefgw}
@@ -54,7 +54,7 @@ const prizeList = [
         ],
     },
     {
-        name: "Best ???",
+        name: "Best Environmental",
         media: (
             <Image
                 src={wdqa}
