@@ -142,7 +142,7 @@ const prizeList = [
         ),
         text: [
             "$10 gift card of choice",
-            "6 year of Canva Pro",
+            "6 months of Canva Pro",
             "Leading Learners EdTech Bundle",
         ],
     },

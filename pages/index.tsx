@@ -65,11 +65,11 @@ const premiumSponsorships = [
         url: "https://eliqian.com/",
         path: eli,
     },
-    {
-        name: "Feasible",
-        url: "https://www.feasible.io/",
-        path: feasible,
-    },
+    // {
+    //     name: "Feasible",
+    //     url: "https://www.feasible.io/",
+    //     path: feasible,
+    // },
 ];
 
 import leadinglearners from "../public/leadinglearners.png";
