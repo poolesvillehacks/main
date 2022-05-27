@@ -32,12 +32,15 @@ const Events: NextPage = () => {
             name: "Workshop: How to be successful with learning a programming language - Sylvia Wu",
             date: "5/28",
             time: "11:00 AM EDT",
+<<<<<<< HEAD
         },
         {
             id: 31,
             name: "Workshop: Intro to Game Dev - Sam Wiggins",
             date: "5/28",
             time: "4:00 PM EDT",
+=======
+>>>>>>> 3baf533038cfc8bf12af57b65373f56d94a340ad
         },
         {
             id: 29,
