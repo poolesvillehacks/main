@@ -19,6 +19,7 @@ import {
     Dialog,
     DialogContent,
     DialogContentText,
+    Avatar,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Image from "next/image";
@@ -51,6 +52,35 @@ import { useTheme } from "@mui/material/styles";
 //     return [days, hours, minutes];
 // };
 // let time = getTime(theDate).join(":");
+
+
+const team = [
+    {
+        name: "Jaden Hou",
+        picture: "jaden",
+    },
+    {
+        name: "James Xu",
+        picture: "james",
+    },
+    {
+        name: "Abhi Ghosh",
+        picture: "abhi",
+    },
+    {
+        name: "Arjun Rao",
+        picture: "arjun",
+    },
+    {
+        name: "Bryan Yung",
+        picture: "bryan",
+    },
+    {
+        name: "Nitya Mahawar",
+        picture: "nitya",
+    },
+];
+
 import savemycents from "../public/smc.png";
 import eli from "../public/eli.png";
 import feasible from "../public/feasible.png";
@@ -566,6 +596,122 @@ const Home: NextPage = () => {
                 >
                     Sponsorship Brochure
                 </Button>
+            </Container>{" "}
+            <Typography
+                color="#373737"
+                component="h5"
+                variant="h5"
+                sx={{
+                    position: "absolute",
+                    right: -30,
+                    transform: "translateY(-60px)",
+                    scrollMarginTop: "5vh",
+                    textOverflow: "hidden",
+                }}
+            >
+                TEAM
+            </Typography>
+            <Container
+                sx={{
+                    minHeight: "30vh",
+                    display: "flex",
+                    alignItems: "center",
+                    flexDirection: "column",
+                }}
+                id="sponsors"
+                maxWidth="xl"
+            >
+                <Typography variant="h1" gutterBottom>
+                    Meet our team
+                </Typography>
+                <Box
+                    sx={{
+                        display: "grid",
+                        gap: "20px",
+                        maxWidth: 200 * 4,
+                        gridTemplateColumns: "1fr 1fr 1fr",
+                    }}
+                >
+                    {team.map((val) => (
+                        <Box
+                            key={val.name}
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "flexStart",
+                                gap: "10px",
+                                width: 200,
+                            }}
+                        >
+                            <Avatar
+                                alt={val.name}
+                                src={`/team/${val.picture}.jpg`}
+                                sx={{
+                                    width: 50,
+                                    height: 50,
+                                }}
+                            ></Avatar>
+                            <Typography variant="h2">{val.name}</Typography>
+                        </Box>
+                    ))}
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                            gap: "10px",
+                        }}
+                    >
+                        <Avatar
+                            alt="Soham"
+                            sx={{
+                                width: 50,
+                                height: 50,
+                            }}
+                        >
+                            S
+                        </Avatar>
+                        <Typography variant="h2">Soham Kyada</Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                            gap: "10px",
+                        }}
+                    >
+                        <Avatar
+                            alt="Soham"
+                            sx={{
+                                width: 50,
+                                height: 50,
+                            }}
+                        >
+                            A
+                        </Avatar>
+                        <Typography variant="h2">Andrew Guo</Typography>
+                    </Box>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "flex-start",
+                            gap: "10px",
+                        }}
+                    >
+                        <Avatar
+                            alt="Soham"
+                            sx={{
+                                width: 50,
+                                height: 50,
+                            }}
+                        >
+                            B
+                        </Avatar>
+                        <Typography variant="h2">Ben Ren</Typography>
+                    </Box>
+                </Box>
             </Container>
             {/* <Container
                 sx={{
