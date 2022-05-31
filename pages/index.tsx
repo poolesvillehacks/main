@@ -64,7 +64,7 @@ const team = [
         picture: "james",
     },
     {
-        name: "Abhi Ghosh",
+        name: "Abhimanyu  Ghosh",
         picture: "abhi",
     },
     {
