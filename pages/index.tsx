@@ -271,10 +271,11 @@ const Home: NextPage = () => {
                         <Button
                             color="secondary"
                             variant="contained"
-                            href="#about"
+                            target="_blank"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdUw81dHxwDf3ttyfjtbHKEy5LI8TXJL1JupdFoibyKOE_NNw/viewform"
                             sx={{ borderRadius: "10px" }}
                         >
-                            Applications open!
+                            Join Us!
                         </Button>
                         {/* <Button
                             color="secondary"
@@ -386,7 +387,7 @@ const Home: NextPage = () => {
                             }}
                             gutterBottom
                         >
-                            Applications open!
+                            Applications Open!
                         </Typography>
                         {/* <Typography
                             color="#212121"
@@ -442,8 +443,9 @@ const Home: NextPage = () => {
                                 variant="contained"
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSdUw81dHxwDf3ttyfjtbHKEy5LI8TXJL1JupdFoibyKOE_NNw/viewform"
                                 sx={{ borderRadius: "10px", color: "#F0E4A3" }}
+                                target="_blank"
                             >
-                                Join us!
+                                Join Us!
                             </Button>
                             {/* <Button
                                 color="primary"
@@ -684,7 +686,7 @@ const Home: NextPage = () => {
                             <Typography variant="h2">{val.name}</Typography>
                         </Box>
                     ))}
-                   
+
                     <Box
                         sx={{
                             display: "flex",
